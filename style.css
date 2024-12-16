@@ -12,6 +12,10 @@ body {
     background:url(img/backgroundimg.png);
 }
 
+.razdel{
+    height: 3vh;
+}
+
 h1, h2, h3 {
     text-align: center;
     margin: 20px 0;
@@ -40,8 +44,8 @@ h3 {
 
 .info li{
     list-style: none;
-    padding-left: 3vh;
     max-width: auto;
+    padding: 3vh;
 }
 
 .info p{
@@ -54,11 +58,15 @@ h3 {
     flex-wrap: wrap;
     margin: 3vh;
     border-radius: 10px;
-    max-width: 30%;
+    width: 50vh;
+    height: 30vh;
+    /* max-width: 30%;
+    max-height: 80%; */
     /* align-items: right; */
     justify-content: right;
     margin-right: 3vh;
-    margin-left: auto;
+    margin-left: 3vh;
+    /* padding-left: 10px; */
 }
 .advantages{
     display:inline-block;
@@ -125,18 +133,48 @@ main {
     background-color: #2E2B2B;
     align-items: center;
     margin: auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 section {
     margin-bottom: 40px;
 }
 .products{
+    margin-bottom: auto;
     display: flex;
     flex-wrap: wrap;
     /* position: relative; */
     /* align-items: center; */
 }
+
+
+
+.ProductCard{
+    display: flex;
+    flex-wrap: wrap;    
+    padding-bottom: 1vh;
+    justify-content: center;
+    margin-top: 5%;
+    /* height: 60%; */
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 0;
+}
+.product img{
+    max-width: 30%;
+}
+.product p{
+    margin-top: 10fr;
+    margin-bottom: 0;
+}
+.product li{
+    list-style:inside;
+}
+
+
 .products .product {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +231,13 @@ section {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+}
+.ProductCard a:last-of-type{
+    background-color: rgb(111, 48, 48);
+}
+
+.ProductCard a:last-of-type:hover{
+    color: rgb(181, 73, 73);
 }
 
 .product-info a:hover {
@@ -335,20 +380,18 @@ footer {
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 2vh 1vh 2vh 1vh;
+    padding: 1vh;
     margin-left: 15vh;
     background-color:#4CAF50;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
     /* border: 3px solid rgba(178, 156, 156, 0.3); */
     /* border-radius: 10px; */
 }
-.pass1{
-    display: flex;
-}
-.pass2{
-    display: flex;
-}
-.pass3{
-    display: flex;
+.navbar .logo:hover{
+    color: #4CAF50;
+    background-color:#2E2B2B;
 }
 .navbar .nav-links {
     display: flex;
