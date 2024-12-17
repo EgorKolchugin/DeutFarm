@@ -58,8 +58,8 @@ h3 {
     flex-wrap: wrap;
     margin: 3vh;
     border-radius: 10px;
-    width: 50vh;
-    height: 30vh;
+    width: 30%;
+    height: auto;
     /* max-width: 30%;
     max-height: 80%; */
     /* align-items: right; */
@@ -93,10 +93,7 @@ h3 {
     align-items: center;
     display: flex;
     margin-bottom: 1vh;
-    min-width: 100%;
-}
-.info hr{
-    width: 100%;
+    min-width: 20%;
 }
 
 .header {
@@ -116,7 +113,7 @@ h3 {
     font-size: 1px;
     /* background-color: rgba(187, 171, 171, 0.2); */
     text-shadow: 1vh 1vh 1vh #090909;
-    padding: 2vh;
+    padding: 2vw;
     border-radius: 10px;
     width: 60%;
     opacity: 0;
@@ -128,6 +125,8 @@ h3 {
 }
 
 main {
+    display: flex;
+    flex-wrap: wrap;
     padding: 20px 40px 20px 40px;
     max-width: 90%;
     background-color: #2E2B2B;
@@ -157,6 +156,7 @@ section {
     margin-top: 5%;
     /* height: 60%; */
 }
+
 .product{
     display: flex;
     flex-wrap: wrap;
@@ -164,7 +164,8 @@ section {
     padding-bottom: 0;
 }
 .product img{
-    max-width: 30%;
+    /* max-width: 30%; */
+    width: 40vh;
 }
 .product p{
     margin-top: 10fr;
@@ -226,7 +227,7 @@ section {
     text-decoration: none;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 1vh 0.5vw;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -291,16 +292,20 @@ input {
 }
 
 .border{
+    /* display: flex;
+    flex-wrap: wrap; */
     background-color:#525b63;
     padding: 10px;
     border-radius: 10px;
+    height: auto;
 }
 
 .contacts {
+    display: flex;  
+    flex-wrap: wrap;
+    height: auto;
     margin-bottom: 0;
     border: 1px solid #ccc;
-    display: flex;
-    /* flex-wrap: wrap; */
     /* text-align: right; */
     background-color:#525b63;
     border-radius: 10px;
@@ -308,9 +313,13 @@ input {
     /* margin-right: 30%; */
 }
 .contacts div{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    width: 100%;
+    /* width: 50%; */
     align-items: center;
+    justify-content: center;
+    min-width: 50%;
 }
 .contactsdiv h2{
     align-items: center;
@@ -318,7 +327,7 @@ input {
 }
 
 .contact-map{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -328,10 +337,9 @@ input {
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    flex-flow: column;
     text-align: center;
     width: 50%;
-    display: flex;
-    flex-wrap: wrap;
 }
 .contacts input {
     outline: none;
@@ -381,7 +389,7 @@ footer {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1vh;
-    margin-left: 15vh;
+    margin-left: 7vw;
     background-color:#4CAF50;
     text-decoration: none;
     color: white;
@@ -402,7 +410,7 @@ footer {
 }
 
 .navbar .nav-links li {
-    margin: 0 15px;
+    margin: 0 1vw;
 }
 
 .sticky {
