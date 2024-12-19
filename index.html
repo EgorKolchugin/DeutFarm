@@ -8,8 +8,13 @@
 </head>
 <div id="pass0"></div>
 <body>
+    <div class="navbarhelp"></div>
     <!-- Основной контент -->
-    <header class="header">
+    <header class="background-slider">
+        <div class="slide" style="background: url('./img/i.jpg') no-repeat center center/cover;"></div>
+        <div class="slide" style="background: url('./img/i2.jpg') no-repeat center center/cover;"></div>
+        <div class="slide" style="background: url('./img/i3.jpg') no-repeat center center/cover;"></div>
+        <div class="slide" style="background: url('./img/i4.jpg') no-repeat center center/cover;"></div>
         <div class="header-content">
             <h1><b>DeutFarm</b> – надёжная сельхозтехника от немецкого производителя</h1>
             <div id="pass1"></div>
@@ -212,10 +217,14 @@
         <p>© 2024 DeutFarm. Все права защищены.</p>
     </footer>
     <script>
+
         document.addEventListener('DOMContentLoaded', function() {
     // Получаем элемент с классом navbar
     const navbar = document.querySelector('.navbar');
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.background-slider');
+    const help = document.querySelector('.navbarhelp');
+
+    // Форма отправки
 
     // Находим элементы
     const contactForm = document.getElementById("contactForm");
@@ -256,6 +265,8 @@
         contactForm.reset();
     });
     
+    // Навигационное меню
+
     // Проверяем, что меню существует
     if (navbar) {
         const stickyOffset = navbar.offsetTop;  // Получаем начальную позицию меню относительно верха страницы
@@ -263,10 +274,12 @@
         window.addEventListener('scroll', function() {
             // При прокрутке страницы, проверяем условие
             if (window.scrollY >= stickyOffset) {
-                header.classList.add('down');
+                // header.classList.add('down');
+                help.classList.add('down');
                 navbar.classList.add('sticky');  // Добавляем класс sticky, чтобы зафиксировать меню
+
             } else {
-                header.classList.remove('down')
+                help.classList.remove('down');
                 navbar.classList.remove('sticky');  // Убираем класс sticky, если меню не нужно фиксировать
             }
         });
@@ -274,6 +287,26 @@
         console.error('Элемент с классом navbar не найден на странице.');
     }
     });
+
+    // Слайдер
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    // Функция смены слайда
+    function changeSlide() {
+      slides[currentSlide].classList.remove('active'); // Убираем текущий
+      currentSlide = (currentSlide + 1) % slides.length; // Следующий слайд
+      slides[currentSlide].classList.add('active'); // Показываем следующий
+    }
+
+    // Устанавливаем первый слайд активным
+    slides[currentSlide].classList.add('active');
+
+    // Запускаем смену каждые 5 секунд
+    setInterval(changeSlide, 5000);
+  });
     </script>
 </body>
 </html>

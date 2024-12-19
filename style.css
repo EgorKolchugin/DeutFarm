@@ -96,20 +96,8 @@ h3 {
     min-width: 20%;
 }
 
-.header {
-    background: url('img/i.jpg') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    color: white;
-    text-align: center;
-}
-.down{
-    height: 98vh;
-}
 
-.header .header-content {
+.header-content {
     font-size: 1px;
     /* background-color: rgba(187, 171, 171, 0.2); */
     text-shadow: 1vh 1vh 1vh #090909;
@@ -118,6 +106,8 @@ h3 {
     width: 60%;
     opacity: 0;
     animation: ani 5.5s forwards;
+    margin-top: 30vh;
+    background-color: rgb(0, 50, 0, 0.6);
 }
 @keyframes ani {
     0% {opacity: 0;}
@@ -146,7 +136,9 @@ section {
     /* align-items: center; */
 }
 
-
+.down{
+    height: 6vh;
+}
 
 .ProductCard{
     display: flex;
@@ -433,3 +425,25 @@ footer {
     color: #4CAF50;
     background-color:#2E2B2B;
 }
+
+
+/* Слайдер */
+.background-slider { 
+    position: relative;
+    width: 100%;
+    height: 90vh; /* высота слайдера */ 
+    overflow: hidden; 
+    text-align: center;
+} 
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Скрыто по умолчанию */
+    transition: opacity 2s ease-in-out; /* Плавная смена */
+  }
+  .slide.active {
+    opacity: 1; /* Видимый слайд */
+  }
